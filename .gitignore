@@ -1,3 +1,8 @@
+openai.key
+.idea/
+public_agenda_june24_.pdf
+public_agenda_june24_.txt
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
