@@ -1,0 +1,41 @@
+Prompt for Extracting Technology Purchases from TPSB Meeting Documents
+We aim to identify and extract information about technology purchases by the Police and Law Enforcement agencies from the Toronto Police Service Board (TPSB) Agendas and Minutes documents. These documents are published as PDFs and contain semi-structured information.
+
+Identify and extract the following fields from the PDF document:
+NAME of Technology System
+NAME of the Company that Developed the System
+NAME of the Company that is Deploying the System
+BUDGET for the Technology System
+START DATE and END DATE for the Deployment of the Technology System
+
+Instructions:
+1. Input PDF Document: Load the PDF document containing the TPSB Agendas and Minutes.
+2. Text Extraction: Extract the text content from the PDF, ensuring that the document structure is preserved as much as possible.
+3. Data Parsing:
+Identify sections related to "Technology Purchases" within the extracted text.
+Extract relevant data fields: NAME of Technology System, NAME of the company that developed the system, NAME of the company that is deploying the system, BUDGET for the Technology system, START DATE and END DATE for deployment.
+4. Data Structuring: Store the extracted information in JSON format.
+
+Here is a template for the desired output in JSON format. If any of the fields are not found, you can leave them empty.
+
+{
+  "technology_purchases": [
+    {
+      "technology_system_name": "XYZ Surveillance System",
+      "developer_company_name": "TechCorp",
+      "deploying_company_name": "DeployIt Ltd.",
+      "budget": 1200000,
+      "start_date": "2023-05-01",
+      "end_date": "2024-04-30"
+    },
+    {
+      "technology_system_name": "ABC Crime Analytics",
+      "developer_company_name": "DataInsight",
+      "deploying_company_name": "",
+      "budget": 800000,
+      "start_date": "",
+      "end_date": "2024-07-14"
+    }
+}
+
+Respond with the complete JSON structure containing an exhaustive list of technology purchases extracted from the provided PDF document. Respond ONLY with the JSON structure. Do not include any additional text or comments in your response. If there is NO data please respond with an empty list.
